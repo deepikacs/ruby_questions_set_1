@@ -32,4 +32,40 @@
   # 2
   # Result 1
   # 2
-
+ class Poly
+  def initialize
+    puts "please enter a value "
+    @a = gets
+    puts "please enter another value "
+    @b = gets
+  end
+  def add
+    @a
+    @b
+end
+def concat
+    @a
+    @b
+end
+class Addition < Poly
+  def add
+    # @a=a
+    # @b=b
+  @c = @a+@b
+  puts " result is #{@c}"
+end
+end
+   
+class Concatination < Poly
+  def concat
+  # @a=a
+  #   @b=b
+  @c="@a"+"@b"
+  puts "result is #{@c}"
+ 
+end
+end
+obj=Addition.new
+obj.add
+obj1=Concatination.new
+# obj1.concat

@@ -1,4 +1,4 @@
-# The client wants to implement a chat application.
+ # The client wants to implement a chat application.
 # The application consists of three type of messages
 # 1. groupMessage --> Anybody can send a message to this group.
 # 2. personalChat --> Message can be sent by client through the user only.
@@ -21,14 +21,16 @@
 
 class Message
 	def initialize
-		puts "This is a Messaging app"
+		# puts "This is a Messaging app"
+
 	end
 
 	# define sendPersonalMessage which calls the personalChat()
-
+	
 	def groupChat(message)
-		puts "This is a Public Group"
-		puts message
+		@message=message
+		 puts "This is a Public Group #{@message}"
+		# puts message
 	end
 
 	private
@@ -41,7 +43,8 @@ class Message
 	protected
 	# The user can access this method throught its user class method 
 	def personalChat(message)
-		puts "This is a Personal Chat"
+		
+		puts "This is a Personal Chat "
 		puts message
 	end
 end
@@ -49,7 +52,7 @@ end
 
 class User < Message
 	def initialize
-		puts "Welcome User"
+		# puts "Welcome User"
 	end
 
 	def sendSecureMessage
@@ -59,9 +62,13 @@ class User < Message
 	def sendPersonalMessage
 		personalChat("Hi, how are you?")
 	end
+	
+
 end
 
+a=Message.new
+a.groupChat("Hi friends")
 
 
 client = User.new
-
+client.sendPersonalMessage
