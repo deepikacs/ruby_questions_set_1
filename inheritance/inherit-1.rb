@@ -88,8 +88,9 @@
 
 
 class Father  
-  def initialize(par1) 
+  def initialize(par1,par3) 
     @para1=par1 
+    @para3=par3
     end
 
 end 
@@ -101,10 +102,11 @@ class Mother
 end 
   class Son < Father
     def Firstname
-      puts " firstName --> #{@para1}"
+    puts " firstName --> #{@para1}"
     end
     def Lastname
-      puts "lastname--> Thomas"
+      # puts "lastname--> Thomas"
+       puts " lasttName --> #{@para3}"
     end
     def Fullname
      puts "Fullname--> My name is Bruce Martha Thomas" 
@@ -115,7 +117,7 @@ end
       puts " secondName --> #{@para2}"
     end
   end
-  obj=Son.new("Bruce")
+  obj=Son.new("Bruce","Thomas")
   obj.Firstname
   obj1=Son1.new("Martha")
   obj1.Secondname

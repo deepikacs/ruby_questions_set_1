@@ -40,7 +40,7 @@
     @b = gets.to_i
   end
   def add
-    @a
+     @a
     @b
 end
 def concat
