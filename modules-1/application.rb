@@ -5,3 +5,4 @@
 module authentication
 	@home
 	@product
+end

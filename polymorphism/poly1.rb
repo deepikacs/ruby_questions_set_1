@@ -35,9 +35,9 @@
  class Poly
   def initialize
     puts "please enter a value "
-    @a = gets
+    @a = gets.to_i
     puts "please enter another value "
-    @b = gets
+    @b = gets.to_i
   end
   def add
     @a
@@ -46,6 +46,7 @@ end
 def concat
     @a
     @b
+end
 end
 class Addition < Poly
   def add
@@ -60,12 +61,48 @@ class Concatination < Poly
   def concat
   # @a=a
   #   @b=b
-  @c="@a"+"@b"
-  puts "result is #{@c}"
- 
+  # @c="@a"+"@b"
+  # puts "result is #{@c}"
+ puts c=[@a,@b].join.to_i
 end
 end
 obj=Addition.new
 obj.add
 obj1=Concatination.new
-# obj1.concat
+obj1.concat
+
+
+
+
+# class Poly
+#   def addconcat(a)
+#     a.addconcat
+#   end
+# end
+# class Addition < Poly
+#   def addconcat
+#     puts "Enter a value of A"
+#     @a=gets.to_i
+#     puts "Enter a value of B"
+#     @b=gets.to_i 
+#     puts "Result"
+#     puts @c=@a+@b
+#   end
+# end
+# class Concatination <Poly
+#   def addconcat
+#     puts "Enter value of A "
+#     a=gets.to_i
+#     puts "Enter value of B "
+#     b=gets.to_i
+#     puts "Result"
+#     puts c=[a,b].join.to_i
+#   end
+# end
+# obj=Poly.new
+# puts "----Addition---"
+# add=Addition.new
+# obj.addconcat(add)
+# puts "---concatination---"
+# concat=Concatination.new
+# obj.addconcat(concat)

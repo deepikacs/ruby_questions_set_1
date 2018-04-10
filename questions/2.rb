@@ -3,10 +3,10 @@ def function
 begin
 	
 	puts "Enter the input1"
-	a = gets.to_i
+	a = Integer(gets)
 	puts "You Entered #{a}"
 	puts "Enter the valid input2"
-	b = gets.to_i
+	b = Integer(gets)
 	puts "You Entered #{b}"
 	c = a+b
 	puts "result is #{c}"

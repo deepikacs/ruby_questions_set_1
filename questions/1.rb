@@ -10,4 +10,4 @@ a=[{"name" => "john", "children" => ["a", "b","C"]},
 {"name" => "matt", "children" => ["e"]}, 
 {"name" => "raj", "children" => ["asd","ad","dd", "eee"]}, 
 {"name" => "dan", "children" => ["ee", "qw"]}]
-a.map{|key,value| ,if (key=children && values <=> 2) }
+a.map{|key,value| ,if ( p key=children && values >= 2) }
