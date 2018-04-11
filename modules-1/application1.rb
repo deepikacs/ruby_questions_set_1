@@ -1,4 +1,15 @@
-require_relative 'authentication'
-require_relative 'plane'
-Car.can_go_fast(Car::VERY_FAST)
-Plane.can_fly(Plane::VERY_HIGH)
+# module Authentication 
+# 	MAKE_SOUND = true 
+# 	CAN_FLY = true 
+# 	def Authentication.authenticate_user(hello) 
+# 		@hello=hello 
+# 		puts "authenticate user #{@hello}" 
+# 	end 
+# end
+
+
+
+module Authentication 
+def authenticate_user
+end
+end

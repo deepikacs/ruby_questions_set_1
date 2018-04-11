@@ -32,44 +32,76 @@
   # 2
   # Result 1
   # 2
- class Poly
+#  class Poly
+
+#   def addp(a, b)
+#     @c= a+b
+#   end
+# end
+# class Addition < Poly
+#   def add(a, b)
+#     # p a
+#     # p b
+#    p addp(a,b)
+#   end
+# end
+# class Concatination < Poly
+#   def add(a,b)
+
+#     puts " result is #{@c}"
+
+#     p addp
+#  #  # @a=a
+#  #  #   @b=b
+#  #  # @c="@a"+"@b"
+#  #  # puts "result is #{@c}"
+#  # puts c=[@a,@b].join.to_i
+#   end
+# end
+# puts "please enter a value "
+#     @a = gets.to_i
+#     puts "please enter another value "
+#     @b = gets.to_i
+# obj=Addition.new
+# obj.add(@a,@b)
+# obj1=Concatination.new
+# obj1.add(@a,@b)
+ 
+
+            # answer1
+class Poly
+  def addp(a,b)
+    @c=a+b
+  end
+end
+class Addition < Poly
   def initialize
     puts "please enter a value "
     @a = gets.to_i
     puts "please enter another value "
     @b = gets.to_i
+
+  p addp(@a,@b)
   end
-  def add
-     @a
-    @b
+
+
 end
-def concat
-    @a
-    @b
-end
-end
-class Addition < Poly
-  def add
-    # @a=a
-    # @b=b
-  @c = @a+@b
-  puts " result is #{@c}"
-end
-end
-   
 class Concatination < Poly
-  def concat
-  # @a=a
-  #   @b=b
-  # @c="@a"+"@b"
-  # puts "result is #{@c}"
- puts c=[@a,@b].join.to_i
-end
+  def initialize
+    puts "please enter a value "
+    @a = gets.chomp
+    puts "please enter another value "
+    @b = gets.chomp
+
+  p addp(@a,@b)
+  end
+
 end
 obj=Addition.new
-obj.add
 obj1=Concatination.new
-obj1.concat
+
+
+
 
 
 

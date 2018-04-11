@@ -10,4 +10,6 @@ a=[{"name" => "john", "children" => ["a", "b","C"]},
 {"name" => "matt", "children" => ["e"]}, 
 {"name" => "raj", "children" => ["asd","ad","dd", "eee"]}, 
 {"name" => "dan", "children" => ["ee", "qw"]}]
-a.map{|key,value| ,if ( p key=children && values >= 2) }
+# a.map{|key,value| ,if ( p key=children && values >= 2) }
+ v=a.map{|x| x["name"] if (x["children"].count >= 2)}
+puts "#{v.compact}"

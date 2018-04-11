@@ -17,19 +17,5 @@
 #        Or
 # File not found
 
-puts "enter filname"
-aFile=gets.to_s
-# binding.pry
-file_created = File.new(aFile, "w")
-puts "Enter the content"
-content = gets.to_s
-file_created.puts(content)
-# binding.pry
-file_created.close
 
-# delete file
 
-puts "enter filename"
-a=gets.to_s
-File.delete(a)
-puts "file deleted"

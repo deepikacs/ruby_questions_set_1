@@ -30,96 +30,87 @@
 #                        Thomas
 
 
-# class Father  
-#   def initialize(par1) 
-#     @para1="Thomas" 
-#     puts "#{@para1}"
-#     puts 'I am the Father.'  
-#   end 
+class Father  
+  def initialize
+    
+    # puts 'I am the Father.'  
+  end 
+  def lname
+    @lname="Thomas"
+    puts "lastName--> #{@lname}"
 
-#  # define fatherName --> father name is 'Thomas'  
-# end  
+ # define fatherName --> father name is 'Thomas'  
+end  
+end
 
 
-# class Mother  
-#   def initialize  
-#     puts 'I am the Mother.'  
-#   end
+class Mother < Father
+
+  def secondName 
+    @secname="Martha"
+    puts "SecondName--> #{@secname}"  
+  end
   
 
-#   # define motherName -> mother's name is Martha
+  # define motherName -> mother's name is Martha
 
-# end  
+end  
 
-# # Class Son inherits his last name from his Father  
-# class Son < Father 
-#   def firstName  
-#     puts "My name is Bruce"  
-#   end
+# Class Son inherits his last name from his Father  
+class Son < Mother
+  def firstName 
+    @fname="Bruce" 
+    puts "firstName-->#{@fname}"
+    secondName
+    lname 
+    fullName 
+  end
 
-#   # define lastName --> last name should be father's name
+  # define lastName --> last name should be father's name
 
-#   def fullName
-#     # Print 'My name is Bruce Martha Thomas'
-#     Print firstName motherName fatherName 
-#   end
-# end
+  def fullName
+    # Print 'My name is Bruce Martha Thomas'
+    puts "fullName-->#{@fname} #{@secname} #{@lname}"
+  end
+end
 
-
-# # Class Son is sub-Class of Mother   
-# class Son < Mother
-#   def firstName  
-#     puts 'My name is Bruce Wayne'  
-#   end 
-
-#   # define secondName --> second name should be Mother's name
-
-#   def fullName
-#     # Print 'My name is Bruce Martha Thomas'
-#     puts firstName secondName lastName
-#   end
-# end
-
-# # instantiate an object and print his firstName, secondName, lastName fullName.
-# obj=Son.new
-# obj.firstName
+# instantiate an object and print his firstName, secondName, lastName fullName.
+obj=Son.new
+obj.firstName
 
 
 
 
-class Father  
-  def initialize(par1,par3) 
-    @para1=par1 
-    @para3=par3
-    end
+#   class Parent
+#   def initialize(par1,par2,par3) 
+#     @para1=par1 
+#     @para2=par2
+#     @para3=par3
+#     end
 
-end 
-class Mother 
-  def initialize(par2) 
-    @para2=par2 
+# end 
+
+#   class Son < Parent
+#     def Firstname
+#     puts " firstName --> #{@para1}"
+#     end
+#     def Secondname
+#       puts " secondName --> #{@para2}"
+#     end
+#     def Lastname
     
-  end
-end 
-  class Son < Father
-    def Firstname
-    puts " firstName --> #{@para1}"
-    end
-    def Lastname
-      # puts "lastname--> Thomas"
-       puts " lasttName --> #{@para3}"
-    end
-    def Fullname
-     puts "Fullname--> My name is Bruce Martha Thomas" 
-    end
-  end
-  class Son1 < Mother
-    def Secondname
-      puts " secondName --> #{@para2}"
-    end
-  end
-  obj=Son.new("Bruce","Thomas")
-  obj.Firstname
-  obj1=Son1.new("Martha")
-  obj1.Secondname
-  obj.Lastname
-  obj.Fullname
+#        puts " lasttName --> #{@para3}"
+#     end
+#     def Fullname
+#      puts "Fullname--> My name is #{@para1} #{@para2} #{@para3}" 
+#     end
+#   end
+    
+
+#   obj=Son.new("Bruce","Martha","Thomas")
+#   obj.Firstname
+#   obj.Secondname
+#   obj.Lastname
+#   obj.Fullname
+
+
